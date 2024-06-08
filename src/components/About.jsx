@@ -24,11 +24,14 @@ const About = () => {
   ];
 
   return (
-    <div id="about" className="w-full flex flex-col items-center mt-10 sm:flex-row sm:max-h-96 sm:pb-20 md:max-h-[500px]">
+    <div
+      id="about"
+      className="w-full flex flex-col items-center mt-10 sm:flex-row sm:max-h-96 sm:pb-20 md:max-h-[500px]"
+    >
       {/* picture */}
       <motion.div
         initial={{ x: -300, opacity: 0 }}
-        transition={{ duration: 0.6, delay: 4 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
         animate={animation}
         className="w-11/12 relative sm:ml-2"
       >
