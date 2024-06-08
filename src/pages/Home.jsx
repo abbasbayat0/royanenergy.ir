@@ -3,6 +3,7 @@ import Intro from "../components/Intro";
 import Header from "../components/Header";
 import About from "../components/About";
 import Team from "../components/Team";
+import Contact from "../components/Contact";
 
 const Home = () => {
   // intro display
@@ -23,6 +24,7 @@ const Home = () => {
       <Header />
       <About />
       <Team />
+      <Contact />
     </div>
   );
 };
