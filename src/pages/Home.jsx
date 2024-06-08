@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Intro from "../components/Intro";
 import Header from "../components/Header";
+import About from "../components/About";
+import Team from "../components/Team";
 
 const Home = () => {
   // intro display
@@ -19,6 +21,8 @@ const Home = () => {
     <div className="relative">
       <Intro show={show} display={display} />
       <Header />
+      <About />
+      <Team />
     </div>
   );
 };

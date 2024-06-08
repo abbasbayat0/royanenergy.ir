@@ -11,7 +11,7 @@ const Intro = (props) => {
       <img
         src={loader}
         alt="royan energy"
-        className={`transition-all ${props.show ? "opacity-100" : "opacity-0"}`}
+        className={`transition-all w-8/12 md:w-5/12 lg:w-4/12 xl:w-3/12 ${props.show ? "opacity-100" : "opacity-0"}`}
       />
     </div>
   );
