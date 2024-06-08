@@ -1,5 +1,6 @@
 import { useAnimation, useInView, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import logo from "../assets/logo.png";
 
 const Contact = () => {
   const ref = useRef();
@@ -13,12 +14,12 @@ const Contact = () => {
     <motion.div
       id="contact"
       initial={{ y: 20, opacity: 0 }}
-      transition={{ duration: 0.6, delay: .5}}
+      transition={{ duration: 0.6, delay: 0.5 }}
       animate={animation}
       ref={ref}
       className="w-full mt-20"
     >
-      <div className="bg-[#1F2332] mt-5 mx-auto p-5 flex flex-col justify-around">
+      <div className="bg-[#1F2332] mt-5 mx-auto p-5 flex flex-col justify-around relative">
         <div>
           <div className="flex items-center gap-2 justify-start ml-5">
             <div className="w-10 h-[2px] rounded-xl bg-[#4daf40] sm:w-8"></div>
@@ -41,6 +42,18 @@ const Contact = () => {
             <p className="text-white font-roboto">mail@royanenergy.ir</p>
             <p className="text-white font-roboto">Iran, Hamedan Province</p>
           </div>
+        </div>
+
+        <div
+          title="Go Up"
+          onClick={() =>
+            document
+              .getElementById("home")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+          className="absolute bottom-10 right-10 w-10 h-10 cursor-pointer"
+        >
+          <img src={logo} alt="royan energy" />
         </div>
       </div>
     </motion.div>

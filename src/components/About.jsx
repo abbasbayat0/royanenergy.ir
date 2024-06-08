@@ -32,7 +32,7 @@ const About = () => {
         animate={animation}
         className="w-11/12 relative sm:ml-2"
       >
-        <img ref={ref} src={person} alt="royan energy" />
+        <img ref={ref} src={person} alt="royan energy" className="rounded-xl" />
         <div className="w-11/12 rounded-xl bg-white shadow-lg h-28 absolute -bottom-12 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center xl:w-10/12 xl:-ml-6">
           <p className="font-roboto text-4xl text-[#4DAF40] font-bold">
             10 Years

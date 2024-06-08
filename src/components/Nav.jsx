@@ -15,7 +15,7 @@ const Nav = () => {
             .getElementById("contact")
             .scrollIntoView({ behavior: "smooth" })
         }
-        className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg"
+        className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg cursor-pointer"
       >
         Contact
       </a>
@@ -24,7 +24,7 @@ const Nav = () => {
           document.getElementById("home").scrollIntoView({ behavior: "smooth" })
         }
       >
-        <img src={logo} alt="royan energy" className="w-8 900:w-12 xl:w-14" />
+        <img src={logo} alt="royan energy" className="w-8 900:w-12 xl:w-14 cursor-pointer" />
       </a>
       <a
         onClick={() =>
@@ -32,7 +32,7 @@ const Nav = () => {
             .getElementById("about")
             .scrollIntoView({ behavior: "smooth" })
         }
-        className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg"
+        className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg cursor-pointer"
       >
         About
       </a>
