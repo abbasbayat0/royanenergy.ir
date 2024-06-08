@@ -18,6 +18,10 @@ const Home = () => {
       changeDisplay(false);
     }, 3500);
   }, [once]);
+
+  window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="relative">
       <Intro show={show} display={display} />

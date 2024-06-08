@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import person from "../assets/person.png";
 import pngOne from "../assets/1.png";
 import pngTwo from "../assets/2.png";
 import pngThree from "../assets/3.png";
 import pngFour from "../assets/4.png";
+import { useAnimation, useInView, motion } from "framer-motion";
 
 const About = () => {
+  const ref = useRef();
+  const view = useInView(ref, { once: true });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (view) animation.start({ x: 0, opacity: 1 });
+  }, [view, animation]);
+
   const [textID, changeTextID] = useState(1);
   const texts = [
     "At Royan Energy Milad Noor, we are dedicated to harnessing the power of renewable energy to create a sustainable future. Since our inception in 2016, we have been providing consultancy and project management services in the field of renewable energy.Our focus is on producing electricity through wind turbines and solar panels, striving to improve and innovate in renewable energy technologies.",
@@ -17,17 +26,27 @@ const About = () => {
   return (
     <div className="w-full flex flex-col items-center mt-10 sm:flex-row sm:max-h-96 sm:pb-20 md:max-h-[500px]">
       {/* picture */}
-      <div className="w-11/12 relative sm:ml-2">
-        <img src={person} alt="royan energy" />
-        <div className="w-11/12 rounded-xl bg-white shadow-lg h-28 absolute -bottom-12 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center">
+      <motion.div
+        initial={{ x: -300, opacity: 0 }}
+        transition={{ duration: 0.6, delay: 4 }}
+        animate={animation}
+        className="w-11/12 relative sm:ml-2"
+      >
+        <img ref={ref} src={person} alt="royan energy" />
+        <div className="w-11/12 rounded-xl bg-white shadow-lg h-28 absolute -bottom-12 left-1/2 -translate-x-1/2 flex justify-center flex-col items-center xl:w-10/12 xl:-ml-6">
           <p className="font-roboto text-4xl text-[#4DAF40] font-bold">
             10 Years
           </p>
           <p className="font-slab font-semibold mt-2">EXPERIENCE IN ENERGY</p>
         </div>
-      </div>
+      </motion.div>
       {/* about */}
-      <div className="mt-20 w-full">
+      <motion.div
+        initial={{ x: 300, opacity: 0 }}
+        transition={{ duration: 0.6, delay: 4 }}
+        animate={animation}
+        className="mt-20 w-full"
+      >
         {/* about us */}
         <div className="flex items-center gap-2 justify-start ml-5">
           <div className="w-10 h-[2px] rounded-xl bg-[#4daf40] sm:w-8"></div>
@@ -95,7 +114,7 @@ const About = () => {
         >
           Read More
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,6 +1,22 @@
+import { useAnimation, useInView, motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 const Contact = () => {
+  const ref = useRef();
+  const view = useInView(ref, { once: true });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (view) animation.start({ y: 0, opacity: 1 });
+  }, [view, animation]);
   return (
-    <div className="w-full mt-20">
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      transition={{ duration: 0.6, delay: .5}}
+      animate={animation}
+      ref={ref}
+      className="w-full mt-20"
+    >
       <div className="bg-[#1F2332] mt-5 mx-auto p-5 flex flex-col justify-around">
         <div>
           <div className="flex items-center gap-2 justify-start ml-5">
@@ -22,13 +38,11 @@ const Contact = () => {
           <div className="flex flex-col gap-8 mt-10 mx-auto">
             <p className="text-white font-roboto">+98 9034035225</p>
             <p className="text-white font-roboto">mail@royanenergy.ir</p>
-            <p className="text-white font-roboto">
-              Iran, Hamedan Province
-            </p>
+            <p className="text-white font-roboto">Iran, Hamedan Province</p>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

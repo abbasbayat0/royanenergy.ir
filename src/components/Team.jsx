@@ -2,23 +2,57 @@ import pouria from "../assets/pouria.png";
 import tat from "../assets/tat.png";
 import arman from "../assets/arman.png";
 import milad from "../assets/milad.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useAnimation, useInView, motion } from "framer-motion";
 
 const Team = () => {
   const [hover, cahngeHover] = useState(0);
 
+  const ref = useRef();
+  const view = useInView(ref, { once: true });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (view) animation.start({ y: 0, opacity: 1 });
+  }, [view, animation]);
+
   return (
-    <div className="mt-20 w-full">
-      <div className="flex items-center gap-2 justify-start ml-5">
-        <div className="w-10 h-[2px] rounded-xl bg-[#4daf40] sm:w-8"></div>
-        <p className="text-[#4daf40] font-roboto font-semibold text-md sm:tracking-widest sm:text-sm">
+    <div ref={ref} className="mt-20 w-full">
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        animate={animation}
+        className="flex items-center gap-2 justify-start ml-5"
+      >
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          animate={animation}
+          className="w-10 h-[2px] rounded-xl bg-[#4daf40] sm:w-8"
+        ></motion.div>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          animate={animation}
+          className="text-[#4daf40] font-roboto font-semibold text-md sm:tracking-widest sm:text-sm"
+        >
           OUR TEAM
-        </p>
-      </div>
-      <h2 className="ml-5 font-lexend text-4xl font-medium opacity-90 mt-2 sm:text-xl md:text-2xl">
+        </motion.p>
+      </motion.div>
+      <motion.h2
+        initial={{ y: 20, opacity: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        animate={animation}
+        className="ml-5 font-lexend text-4xl font-medium opacity-90 mt-2 sm:text-xl md:text-2xl"
+      >
         Our Motivated Team
-      </h2>
-      <div className="flex flex-col justify-center items-center w-full 425:flex-row 425:flex-wrap 425:gap-10 sm:gap-5 lg:gap-10 xl:gap-20">
+      </motion.h2>
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        animate={animation}
+        className="flex flex-col justify-center items-center w-full 425:flex-row 425:flex-wrap 425:gap-10 sm:gap-5 lg:gap-10 xl:gap-20"
+      >
         <div
           onMouseEnter={() => cahngeHover(1)}
           onMouseLeave={() => cahngeHover(0)}
@@ -31,11 +65,13 @@ const Team = () => {
           <div className="w-52 h-52 overflow-hidden rounded-full absolute top-20">
             <img src={milad} alt="royan energy" />
           </div>
-          <div className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
-                hover == 1
-                  ? "translate-y-0 opacity-90"
-                  : "translate-y-2 opacity-0"
-              }`}>
+          <div
+            className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
+              hover == 1
+                ? "translate-y-0 opacity-90"
+                : "translate-y-2 opacity-0"
+            }`}
+          >
             <div
               className={`w-10 h-10 rounded-xl bg-gray-600 flex transition-all duration-700 justify-center items-center `}
             >
@@ -61,11 +97,13 @@ const Team = () => {
           <div className="w-52 h-52 overflow-hidden rounded-full absolute top-20">
             <img src={tat} alt="royan energy" />
           </div>
-          <div className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
-                hover == 2
-                  ? "translate-y-0 opacity-90"
-                  : "translate-y-2 opacity-0"
-              }`}>
+          <div
+            className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
+              hover == 2
+                ? "translate-y-0 opacity-90"
+                : "translate-y-2 opacity-0"
+            }`}
+          >
             <div
               className={`w-10 h-10 rounded-xl bg-gray-600 flex transition-all duration-700 justify-center items-center `}
             >
@@ -91,11 +129,13 @@ const Team = () => {
           <div className="w-52 h-52 overflow-hidden rounded-full absolute top-20">
             <img src={pouria} alt="royan energy" />
           </div>
-          <div className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
-                hover == 3
-                  ? "translate-y-0 opacity-90"
-                  : "translate-y-2 opacity-0"
-              }`}>
+          <div
+            className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
+              hover == 3
+                ? "translate-y-0 opacity-90"
+                : "translate-y-2 opacity-0"
+            }`}
+          >
             <div
               className={`w-10 h-10 rounded-xl bg-gray-600 flex transition-all duration-700 justify-center items-center `}
             >
@@ -121,11 +161,13 @@ const Team = () => {
           <div className="w-52 h-52 overflow-hidden rounded-full absolute top-20">
             <img src={arman} alt="royan energy" />
           </div>
-          <div className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
-                hover == 4
-                  ? "translate-y-0 opacity-90"
-                  : "translate-y-2 opacity-0"
-              }`}>
+          <div
+            className={`flex justify-center items-center w-[150px] h-14 gap-2 absolute bottom-20 left-1/2 transition-all duration-500 -translate-x-1/2 ${
+              hover == 4
+                ? "translate-y-0 opacity-90"
+                : "translate-y-2 opacity-0"
+            }`}
+          >
             <div
               className={`w-10 h-10 rounded-xl bg-gray-600 flex transition-all duration-700 justify-center items-center `}
             >
@@ -139,7 +181,7 @@ const Team = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

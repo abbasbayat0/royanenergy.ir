@@ -4,8 +4,8 @@ import loader from "../assets/loader.gif";
 const Intro = (props) => {
   return (
     <div
-      className={`justify-center items-center bg-white w-full h-screen ${
-        props.display ? "z-10 flex" : "-z-10 hidden"
+      className={`justify-center items-center absolute bg-white w-full h-screen ${
+        props.display ? "z-30 flex" : "-z-10 hidden"
       }`}
     >
       <img
