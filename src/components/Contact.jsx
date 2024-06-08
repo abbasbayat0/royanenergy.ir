@@ -11,6 +11,7 @@ const Contact = () => {
   }, [view, animation]);
   return (
     <motion.div
+      id="contact"
       initial={{ y: 20, opacity: 0 }}
       transition={{ duration: 0.6, delay: .5}}
       animate={animation}

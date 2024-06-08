@@ -24,7 +24,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center mt-10 sm:flex-row sm:max-h-96 sm:pb-20 md:max-h-[500px]">
+    <div id="about" className="w-full flex flex-col items-center mt-10 sm:flex-row sm:max-h-96 sm:pb-20 md:max-h-[500px]">
       {/* picture */}
       <motion.div
         initial={{ x: -300, opacity: 0 }}

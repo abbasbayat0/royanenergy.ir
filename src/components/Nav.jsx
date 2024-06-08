@@ -9,11 +9,33 @@ const Nav = () => {
       transition={{ duration: 0.8, delay: 3.5 }}
       className="absolute z-10 top-0 w-full h-10 bg-white flex justify-around items-center 900:h-14 xl:h-16"
     >
-      <a href="" className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg">Contact</a>
-      <a href="">
+      <a
+        onClick={() =>
+          document
+            .getElementById("contact")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+        className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg"
+      >
+        Contact
+      </a>
+      <a
+        onClick={() =>
+          document.getElementById("home").scrollIntoView({ behavior: "smooth" })
+        }
+      >
         <img src={logo} alt="royan energy" className="w-8 900:w-12 xl:w-14" />
       </a>
-      <a href="" className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg">About</a>
+      <a
+        onClick={() =>
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+        className="bg-[#4DAF40] p-1 rounded-xl text-white text-sm 900:text-base xl:text-lg"
+      >
+        About
+      </a>
     </motion.div>
   );
 };

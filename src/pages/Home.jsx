@@ -23,7 +23,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <div className="relative">
+    <div className="relative scroll-smooth" id="home">
       <Intro show={show} display={display} />
       <Header />
       <About />
