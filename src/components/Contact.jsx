@@ -31,16 +31,30 @@ const Contact = () => {
             Talk To Us
           </h2>
         </div>
-        <div className="flex items-center gap-5 w-60">
-          <div className="flex flex-col gap-5 mt-10 mx-auto">
-            <i className="fa-solid fa-phone text-2xl text-white opacity-90"></i>
-            <i className="fa-solid fa-envelope text-2xl text-white opacity-90"></i>
-            <i className="fa-solid fa-location-dot text-2xl text-white opacity-90"></i>
+        <div className="flex justify-center items-start flex-col w-80 mt-10 gap-8 mb-10">
+          <div className="flex gap-5 justify-center items-center">
+            <i className="fa-solid fa-signs-post text-2xl text-white opacity-90"></i>
+            <p className="text-white font-roboto" title="Post Code">
+              6516763863
+            </p>
           </div>
-          <div className="flex flex-col gap-8 mt-10 mx-auto">
-            <p className="text-white font-roboto">+98 9034035225</p>
+          <div className="flex gap-5 justify-center items-center">
+            <i className="fa-solid fa-phone text-2xl text-white opacity-90"></i>
+            <div>
+              <p className="text-white font-roboto">+98 081 38330570</p>
+              <p className="text-white font-roboto">+98 9390403540</p>
+            </div>
+          </div>
+          <div className="flex gap-5 justify-center items-center">
+            <i className="fa-solid fa-envelope text-2xl text-white opacity-90"></i>
             <p className="text-white font-roboto">mail@royanenergy.ir</p>
-            <p className="text-white font-roboto">Iran, Hamedan Province</p>
+          </div>
+          <div className="flex gap-5 justify-center items-center">
+            <i className="fa-solid fa-location-dot text-2xl text-white opacity-90"></i>
+            <p className="text-white font-roboto">
+              Iran, Hamedan, Shahid Dibaj St., Science and Technology Park, 3rd
+              fl, Unit 22
+            </p>
           </div>
         </div>
 
