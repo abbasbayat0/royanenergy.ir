@@ -40,7 +40,7 @@ const Contact = () => {
             <div className="flex gap-5 justify-center items-center">
               <i className="fa-solid fa-phone text-2xl text-white opacity-90"></i>
               <div>
-                <p className="text-white font-roboto">+98 081 38330570</p>
+                <p className="text-white font-roboto">+98 81 38330570</p>
                 <p className="text-white font-roboto">+98 9390403540</p>
               </div>
             </div>

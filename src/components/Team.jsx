@@ -118,7 +118,7 @@ const Team = () => {
                 : "translate-y-2 opacity-0"
             }`}
           >
-            <p className="p-2 text-white font-lexend rounded-xl bg-gray-600 flex transition-all duration-700 justify-center items-center text-center text-[12px]">Head of the Project Management Secto</p>
+            <p className="p-2 text-white font-lexend rounded-xl bg-gray-600 flex transition-all duration-700 justify-center items-center text-center text-[12px]">Head of the Project Management Sector</p>
           </div>
         </div>
         <div
