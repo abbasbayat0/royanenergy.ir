@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Team from "../components/Team";
 import Contact from "../components/Contact";
-import logo from "../assets/logo.png";
 
 const Home = () => {
   // intro display
@@ -19,6 +18,10 @@ const Home = () => {
       changeDisplay(false);
     }, 3500);
   }, [once]);
+
+  window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="relative scroll-smooth" id="home">
       <Intro show={show} display={display} />
