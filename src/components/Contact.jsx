@@ -1,6 +1,8 @@
 import { useAnimation, useInView, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import logo from "../assets/logo.png";
+import tavanir from "../assets/tavanir.png";
+import park from "../assets/park.png";
 
 const Contact = () => {
   const ref = useRef();
@@ -31,43 +33,55 @@ const Contact = () => {
             Talk To Us
           </h2>
         </div>
-        <div className="flex justify-center items-start flex-col w-80 mt-10 gap-8 mb-10">
-          <div className="flex gap-5 justify-center items-center">
-            <i className="fa-solid fa-signs-post text-2xl text-white opacity-90"></i>
-            <p className="text-white font-roboto" title="Post Code">
-              6516763863
-            </p>
-          </div>
-          <div className="flex gap-5 justify-center items-center">
-            <i className="fa-solid fa-phone text-2xl text-white opacity-90"></i>
-            <div>
-              <p className="text-white font-roboto">+98 081 38330570</p>
-              <p className="text-white font-roboto">+98 9390403540</p>
+
+        {/* start two */}
+        <div>
+          <div className="flex justify-center items-start flex-col w-80 mt-10 gap-8 mb-10">
+            <div className="flex gap-5 justify-center items-center">
+              <i className="fa-solid fa-phone text-2xl text-white opacity-90"></i>
+              <div>
+                <p className="text-white font-roboto">+98 081 38330570</p>
+                <p className="text-white font-roboto">+98 9390403540</p>
+              </div>
+            </div>
+            <div className="flex gap-5 justify-center items-center">
+              <i className="fa-solid fa-envelope text-2xl text-white opacity-90"></i>
+              <p className="text-white font-roboto">mail@royanenergy.ir</p>
+            </div>
+            <div className="flex gap-5 justify-center items-center">
+              <i className="fa-solid fa-location-dot text-2xl text-white opacity-90"></i>
+              <div>
+                <p className="text-white font-roboto">
+                  Iran, Hamedan, Shahid Dibaj St., Science and Technology Park,
+                  3rd fl, Unit 22
+                </p>
+                <p className="text-white font-roboto">Post Code : 6516763863</p>
+              </div>
             </div>
           </div>
-          <div className="flex gap-5 justify-center items-center">
-            <i className="fa-solid fa-envelope text-2xl text-white opacity-90"></i>
-            <p className="text-white font-roboto">mail@royanenergy.ir</p>
-          </div>
-          <div className="flex gap-5 justify-center items-center">
-            <i className="fa-solid fa-location-dot text-2xl text-white opacity-90"></i>
-            <p className="text-white font-roboto">
-              Iran, Hamedan, Shahid Dibaj St., Science and Technology Park, 3rd
-              fl, Unit 22
-            </p>
-          </div>
-        </div>
 
-        <div
-          title="Go Up"
-          onClick={() =>
-            document
-              .getElementById("home")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-          className="absolute bottom-10 right-10 w-10 h-10 cursor-pointer"
-        >
-          <img src={logo} alt="royan energy" />
+          <div
+            title="Go Up"
+            onClick={() =>
+              document
+                .getElementById("home")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="absolute bottom-10 right-10 w-10 h-10 cursor-pointer"
+          >
+            <img src={logo} alt="royan energy" />
+          </div>
+
+          <div className="absolute top-28 right-5 flex flex-col justify-center items-center gap-5">
+            <div className="w-14 h-14 flex justify-center items-center">
+              <a href="https://www.tavanir.org.ir/en/" target="_blank">
+                <img src={tavanir} alt="royan energy" />
+              </a>
+            </div>
+            <div className="w-24 h-24 flex justify-center items-center">
+              <a href="https://hstp.ir/" target="_blank"><img src={park} alt="royan energy" /></a>
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>
