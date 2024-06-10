@@ -46,7 +46,7 @@ const About = () => {
       {/* about */}
       <motion.div
         initial={{ x: 300, opacity: 0 }}
-        transition={{ duration: 0.6, delay: 4 }}
+        transition={{ duration: 0.6, delay: 1 }}
         animate={animation}
         className="mt-20 w-full"
       >
