@@ -40,8 +40,8 @@ const Contact = () => {
             <div className="flex gap-5 justify-center items-center">
               <i className="fa-solid fa-phone text-2xl text-white opacity-90"></i>
               <div>
-                <p className="text-white font-roboto">+98 81 38330570</p>
-                <p className="text-white font-roboto">+98 9390403540</p>
+                <p className="text-white font-roboto">+98 903 403 5225</p>
+                <p className="text-white font-roboto">+98 918 814 8102</p>
               </div>
             </div>
             <div className="flex gap-5 justify-center items-center">
@@ -52,10 +52,10 @@ const Contact = () => {
               <i className="fa-solid fa-location-dot text-2xl text-white opacity-90"></i>
               <div>
                 <p className="text-white font-roboto">
-                  Iran, Hamedan, Shahid Dibaj St., Science and Technology Park,
-                  3rd fl, Unit 22
+                  Unit 22, 3rd fl., Science and Technology Park, Shahid Dibaj
+                  St., Hamedan, Iran
                 </p>
-                <p className="text-white font-roboto">Post Code : 6516763863</p>
+                <p className="text-white font-roboto mt-2">Post Code : 6516763863</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,9 @@ const Contact = () => {
               </a>
             </div>
             <div className="w-24 h-24 flex justify-center items-center">
-              <a href="https://hstp.ir/" target="_blank"><img src={park} alt="royan energy" /></a>
+              <a href="https://hstp.ir/" target="_blank">
+                <img src={park} alt="royan energy" />
+              </a>
             </div>
           </div>
         </div>
